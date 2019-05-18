@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="utf-8">
+	<title>Navigation Demo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Best Website Since Google</h1>
+	</header>
+
+	<nav>
+		<ul>
+			<a href="#"><li>Home</li></a>
+			<a href="#"><li>About</li></a>
+			<a href="#"><li>Blog</li></a>
+			<a href="#"><li>Shop</li></a>
+			<a href="#"><li>Gallery</li></a>
+			<a href="#"><li>Contact</li></a>
+		</ul>
+		<div class="handle">Menu</div>
+	</nav>
+
+	<section>
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+	</section>
+
+	<script>
+		$('.handle').on('click',function()
+		{
+			$('nav ul').toggleClass('showing');
+		});
+	</script>
+
+
+</body>
+</html>
+
+...............................css......................................................
+
+
+
+body{
+    margin: 0;
+	padding:0;
+	font-family: cursive;
+}
+header{
+	background-color: red;
+	width: 100%;
+	color: white;
+	text-align: center;
+	height: 100px;
+    padding-top:8px;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+nav ul{
+	background-color: grey;
+	overflow: hidden;
+	color: white;
+	padding:0;
+	text-align: center;
+	margin: 0;
+   /* -webkit-transition:max-height 1s;
+    -ms-transition:max-height 1s;
+    -moz-transition:max-height 1s;
+    -o-transition:max-height 1s;*/
+    transition:max-height 1s;
+}
+nav ul li{
+	display: inline-block;
+	padding: 20px;
+}
+nav ul li:hover{
+	background-color: lightgreen;
+}
+section{
+	line-height: 1.5em;
+	font-size: 0.9em;
+	padding: 40px;
+	width: 75%;
+	margin: 0 auto;	
+}
+.handle{
+	width: 100%;
+	background: yellow;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 15px 10px;
+	cursor: pointer;
+	color: black;
+	font-size:18px;
+	display: none;
+	}
+
+	@media screen and (max-width: 580px)
+	{
+		 nav ul{
+			max-height: 0;
+		}
+		.showing{
+			max-height: 20em;
+		}
+		nav ul li{
+			box-sizing: border-box;
+			width: 100%;
+			padding: 15px;
+			text-align: left;
+		}
+		.handle{
+			display: block;
+		}
+	}
+
+
+
+
+
+...................................................................................................................
